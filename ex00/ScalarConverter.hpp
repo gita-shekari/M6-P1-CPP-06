@@ -6,7 +6,7 @@
 /*   By: gshekari <gshekari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/07 01:41:44 by gshekari          #+#    #+#             */
-/*   Updated: 2026/07/07 09:04:10 by gshekari         ###   ########.fr       */
+/*   Updated: 2026/07/08 03:50:13 by gshekari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 #include <iostream>
 #include <string>
-#include <ctype.h>
+#include <climits>
+#include <cstdlib>
+#include <iomanip>
 
 class ScalarConverter
 {
@@ -26,15 +28,23 @@ class ScalarConverter
 			INT,
 			FLOAT,
 			DOUBLE,
+			INF_P,
+			INF_M,
+			NNAN,
 			INVALID
 		};
 		ScalarConverter();
 		ScalarConverter(const ScalarConverter &other);
 		ScalarConverter&operator=(const ScalarConverter &other);
 		~ScalarConverter();
-		static type detect_type(std::string &literal);
+		static type detect_type(const std::string &literal);
+		static void handle_special_literals(type t);
+		static void handle_char(char c);
+		static void handle_int(int i);
+		static void handle_float(float f);
+		static void handle_double(double d);
 	public:
-		static void convert(std::string &literal);
+		static void convert(const std::string &literal);
 };
 
 #endif
