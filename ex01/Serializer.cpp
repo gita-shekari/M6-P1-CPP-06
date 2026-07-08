@@ -6,7 +6,7 @@
 /*   By: gshekari <gshekari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/08 04:25:13 by gshekari          #+#    #+#             */
-/*   Updated: 2026/07/08 04:26:56 by gshekari         ###   ########.fr       */
+/*   Updated: 2026/07/08 21:18:51 by gshekari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ Serializer::~Serializer()
 {
 
 }
-static uintptr_t serialize(Data* ptr)
+uintptr_t Serializer::serialize(Data* ptr)
 {
-
+	return reinterpret_cast<uintptr_t>(ptr);
 }
-static Data* deserialize(uintptr_t raw)
+Data* Serializer::deserialize(uintptr_t raw)
 {
-	
+	return reinterpret_cast<Data*>(raw);
 }
