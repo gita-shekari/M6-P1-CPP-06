@@ -6,7 +6,18 @@
 /*   By: gshekari <gshekari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/08 22:14:28 by gshekari          #+#    #+#             */
-/*   Updated: 2026/07/08 22:14:29 by gshekari         ###   ########.fr       */
+/*   Updated: 2026/07/10 11:36:09 by gshekari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef B_HPP
+#define B_HPP
+
+#include <iostream>
+#include "Base.hpp"
+
+class B: public Base
+{
+
+};
+#endif

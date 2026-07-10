@@ -6,17 +6,19 @@
 /*   By: gshekari <gshekari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/08 22:14:19 by gshekari          #+#    #+#             */
-/*   Updated: 2026/07/08 22:20:12 by gshekari         ###   ########.fr       */
+/*   Updated: 2026/07/10 11:37:14 by gshekari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define A_HPP
+#ifndef A_HPP
 #define A_HPP
 
 #include <iostream>
+#include "Base.hpp"
 
 class A: public Base
 {
 
-}
+};
+
 #endif
