@@ -6,7 +6,7 @@
 /*   By: gshekari <gshekari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/08 22:14:42 by gshekari          #+#    #+#             */
-/*   Updated: 2026/07/10 14:31:38 by gshekari         ###   ########.fr       */
+/*   Updated: 2026/07/10 14:40:23 by gshekari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void identify(Base& p)
 		A &a= dynamic_cast<A&>(p);
 		(void)a;
 		std::cout << "A" << std::endl;
+		return;
 	}
 	catch(const std::exception& e)
 	{
@@ -54,6 +55,7 @@ void identify(Base& p)
 		B &b = dynamic_cast<B&>(p);
 		(void)b;
 		std::cout << "B" << std::endl;
+		return;
 	}
 	catch(const std::exception& e)
 	{
@@ -63,6 +65,7 @@ void identify(Base& p)
 		C &c = dynamic_cast<C&>(p);
 		(void)c;
 		std::cout << "C" << std::endl;
+		return;
 	}
 	catch(const std::exception& e)
 	{
@@ -94,6 +97,11 @@ int main()
 	identify(*base2);
 	identify(*base3);
 	identify(*base4);
-	identify(*base5);
+
+	delete base1;
+	delete base2;
+	delete base3;
+	delete base4;
+
 	return 0;
 }

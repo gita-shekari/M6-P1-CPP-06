@@ -6,14 +6,13 @@
 /*   By: gshekari <gshekari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/08 22:14:39 by gshekari          #+#    #+#             */
-/*   Updated: 2026/07/10 11:36:14 by gshekari         ###   ########.fr       */
+/*   Updated: 2026/07/10 14:45:53 by gshekari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef C_HPP
 #define C_HPP
 
-#include <iostream>
 #include "Base.hpp"
 
 class C: public Base

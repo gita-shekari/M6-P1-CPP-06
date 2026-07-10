@@ -6,7 +6,7 @@
 /*   By: gshekari <gshekari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/08 21:44:24 by gshekari          #+#    #+#             */
-/*   Updated: 2026/07/10 11:41:25 by gshekari         ###   ########.fr       */
+/*   Updated: 2026/07/10 14:39:59 by gshekari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 Base::~Base()
 {
-
+	std::cout << "object deleted" << std::endl;
 }
